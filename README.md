@@ -12,6 +12,9 @@
 - Requests
 - Colorama
 
+# Preview
+![unknown](https://user-images.githubusercontent.com/96947108/148848685-a0c13e58-e411-4ffe-bd5e-a714ae83600c.png)
+
 # Credits
 
 ``https://github.com/fromkeys``
