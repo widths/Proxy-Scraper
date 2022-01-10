@@ -3,7 +3,7 @@
 </div>
 
 # What is Moon?
-- Moon is a lightweight and fast proxy scraper made by using ProxyScrapes' api. 
+- Moon is a lightweight and fast proxy scraper made by using ProxyScrape's api. 
 
 # What can i do with this?
 - You can use proxies for varietys of projects, this is just simply gathering them for you. 
