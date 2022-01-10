@@ -8,7 +8,7 @@
 # What can i do with this?
 - You can use proxies for varietys of projects, this is just simply gathering them for you. 
 
-# Reqiurements
+# Requirements
 - Requests
 - Colorama
 
