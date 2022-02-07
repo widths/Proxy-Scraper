@@ -57,7 +57,7 @@ print(banner)
 
 
 def option():
-    os.system(f'title Moon Proxy Scraper ^| https://github.com/6pj')
+    os.system(f'title Moon Proxy Scraper ^| https://github.com/dain404')
     print(f"[{Fore.MAGENTA}?{Fore.RESET}] What type of proxies do you want to scrape?")
     choice = input(f"{Fore.MAGENTA}> ")
     if choice == "1":
