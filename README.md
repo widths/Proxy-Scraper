@@ -14,4 +14,4 @@
 
 # Credits
 
-``https://github.com/dain404``
+``https://github.com/S26``
