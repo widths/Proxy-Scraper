@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/96947108/148847326-d145a72d-b1d8-410e-98a5-9e8635b0afee.png" width=300px>
+  <img src="https://user-images.githubusercontent.com/96947108/159783982-1f11f826-358c-4781-941a-415048b7d378.gif" width=300px>
 </div>
 
 # What is Moon?
@@ -8,9 +8,14 @@
 # What can i do with this?
 - You can use proxies for varietys of projects, this is just simply gathering them for you. 
 
+# What is new?
+- Kinda edited the code. Fixed the UI slightly (was pretty ugly imo)
+- Updating this very soon when i have time, going to stop using proxyscrape SINCE most of the proxies are dead.
+
 # Requirements
 - Requests
 - Colorama
+- Sys
 
 # Credits
 
