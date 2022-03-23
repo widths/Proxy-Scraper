@@ -1,76 +1,49 @@
-import requests
 import os 
-import colorama
-import time 
+import requests
+import time
+import sys
+import colorama 
 from colorama import Fore
 
-clear = lambda: os.system('cls') if os.name == 'nt' else os.system('clear')
+clear = lambda: os.system('cls') if os.name == 'nt' else os.system('clear');local = time.localtime();current = time.strftime("%H:%M:%S", local)
+
+def write(text):
+    for f in text: print('' + f, end="");sys.stdout.flush();time.sleep(0.005)
+
+os.system("title Moon Proxy Scraper ^| Awaiting Proxy To Scrape");clear()
 
 def socks5():
-    os.system('title Scraping SOCKS5 Proxies!')
-    r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all")
-    proxies = open("socks5.txt", "w")
-    proxies.write(str(r.text)) 
-    proxies.close()
-    clear()
-    print(banner)
-    option()
-
-
-def http(): 
-    os.system('title Scraping HTTP Proxies!')
-    r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all")
-    proxies = open("http.txt", "w")
-    proxies.write(str(r.text)) 
-    proxies.close()
-    clear() 
-    print(banner)
-    option()
+    os.system("title Scraping SOCKS5");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("socks5.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option()
+ 
 
 def socks4():
-    os.system('title Scraping SOCKS4 Proxies!')
-    r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all")
-    proxies = open("socks4.txt", "w")
-    proxies.write(str(r.text)) 
-    proxies.close()
-    clear()
-    print(banner)
-    option()
+    os.system("title Scraping SOCKS4");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("socks4.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option() 
+ 
+
+def http():
+    os.system("title Scraping HTTP");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("http.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option()
+ 
 
 banner = f"""{Fore.MAGENTA}
-
-
                   ███╗   ███╗ ██████╗  ██████╗ ███╗   ██╗                  
                   ████╗ ████║██╔═══██╗██╔═══██╗████╗  ██║
                   ██╔████╔██║██║   ██║██║   ██║██╔██╗ ██║
                   ██║╚██╔╝██║██║   ██║██║   ██║██║╚██╗██║
                   ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║ ╚████║
                   ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝{Fore.RESET}
-                    
-                       [{Fore.MAGENTA}1{Fore.RESET}] HTTP       
-                       [{Fore.MAGENTA}2{Fore.RESET}] SOCKS5             
-                       [{Fore.MAGENTA}3{Fore.RESET}] SOCKS4             
-
+                             
 {Fore.RESET}"""
-clear()
-print(banner)
-
+clear();print(banner)
 
 def option():
-    os.system(f'title Moon Proxy Scraper ^| https://github.com/2S6')
-    print(f"[{Fore.MAGENTA}?{Fore.RESET}] What type of proxies do you want to scrape?")
-    choice = input(f"{Fore.MAGENTA}> ")
-    if choice == "1":
-        http()
-    elif choice == "2":
+    write("What type of proxies would you like?\n");print("\nSOCKS5\nSOCKS4\nHTTP\n");choice = input(f"[{current}] > ")
+    if choice == "SOCKS5":
         socks5()
-    elif choice == "3":
+    elif choice == "SOCKS4":
         socks4()
+    elif choice == "HTTP":
+        http()
     else:
-        print(f"{Fore.RESET}[{Fore.RED}!{Fore.RESET}] Did you type the correct choice?")
-        time.sleep(3)
-        clear()
-        print(banner)
-        option()
-
+        print(f"[{current}] Did you type the correct choice?");time.sleep(2);clear();print(banner);option()
+        
 option()
