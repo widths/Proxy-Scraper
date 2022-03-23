@@ -15,15 +15,12 @@ os.system("title Moon Proxy Scraper ^| Awaiting Proxy To Scrape");clear()
 def socks5():
     os.system("title Scraping SOCKS5");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("socks5.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option()
  
-
 def socks4():
     os.system("title Scraping SOCKS4");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("socks4.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option() 
  
-
 def http():
     os.system("title Scraping HTTP");r = requests.get("https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all");proxies = open("http.txt", "w");proxies.write(str(r.text));proxies.close();clear();print(banner);option()
  
-
 banner = f"""{Fore.MAGENTA}
                   ███╗   ███╗ ██████╗  ██████╗ ███╗   ██╗                  
                   ████╗ ████║██╔═══██╗██╔═══██╗████╗  ██║
