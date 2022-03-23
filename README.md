@@ -19,4 +19,4 @@
 
 # Credits
 
-``https://github.com/S26``
+``https://github.com/widths``
