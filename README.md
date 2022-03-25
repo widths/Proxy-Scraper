@@ -10,7 +10,6 @@
 
 # What is new?
 - Kinda edited the code. Fixed the UI slightly (was pretty ugly imo)
-- Updating this very soon when i have time, going to stop using proxyscrape SINCE most of the proxies are dead.
 
 # Requirements
 - Requests
