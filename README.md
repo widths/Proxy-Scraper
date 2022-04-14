@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/96947108/163412931-23985a0b-aae6-4565-8253-c664944f80d9.png" width=300px>
+  <img src="https://user-images.githubusercontent.com/96947108/163413924-d290e017-34e3-47b8-ad98-ba9d75669339.png" width=300px>
 </div>
 
 # What is Moon?
